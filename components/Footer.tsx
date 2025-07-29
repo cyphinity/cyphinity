@@ -1,28 +1,25 @@
-import Link from "next/link";
-
 const Footer = () => {
   return (
-    <footer className="bg-background border-t border-border">
+    <footer className="relative backdrop-blur-lg bg-slate-900/80 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand Section */}
-          <div className="col-span-1 md:col-span-2">
+          <div className="col-span-1 md:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">C</span>
               </div>
-              <span className="text-xl font-bold text-foreground">Cyphinity</span>
+              <span className="text-xl font-bold text-white">Cyphinity</span>
             </div>
-            <p className="text-foreground/70 mb-4 max-w-md">
-              Empowering businesses with cutting-edge technology solutions. 
-              We transform ideas into digital realities that drive growth and innovation.
+            <p className="text-white/80 mb-4 max-w-md">
+              Empowering businesses with cutting-edge technology solutions.
             </p>
             <div className="flex space-x-4">
               <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground/70 hover:text-blue-600 transition-colors"
+                className="text-white hover:text-cyan-300 transition-colors duration-300"
               >
                 <span className="sr-only">Twitter</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -33,7 +30,7 @@ const Footer = () => {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground/70 hover:text-blue-600 transition-colors"
+                className="text-white hover:text-cyan-300 transition-colors duration-300"
               >
                 <span className="sr-only">LinkedIn</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -44,7 +41,7 @@ const Footer = () => {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground/70 hover:text-blue-600 transition-colors"
+                className="text-white hover:text-cyan-300 transition-colors duration-300"
               >
                 <span className="sr-only">GitHub</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -56,85 +53,56 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-foreground font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-foreground/70 hover:text-blue-600 transition-colors">
-                  About Us
-                </Link>
+                <a href="#about" className="text-white/80 hover:text-cyan-300 transition-colors duration-300">
+                  About
+                </a>
               </li>
               <li>
-                <Link href="/services" className="text-foreground/70 hover:text-blue-600 transition-colors">
+                <a href="#services" className="text-white/80 hover:text-cyan-300 transition-colors duration-300">
                   Services
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="/portfolio" className="text-foreground/70 hover:text-blue-600 transition-colors">
-                  Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-foreground/70 hover:text-blue-600 transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/careers" className="text-foreground/70 hover:text-blue-600 transition-colors">
-                  Careers
-                </Link>
+                <a href="#contact" className="text-white/80 hover:text-cyan-300 transition-colors duration-300">
+                  Contact
+                </a>
               </li>
             </ul>
           </div>
 
-          {/* Contact & Support */}
+          {/* Contact Info */}
           <div>
-            <h3 className="text-foreground font-semibold mb-4">Support</h3>
+            <h3 className="text-white font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/contact" className="text-foreground/70 hover:text-blue-600 transition-colors">
-                  Contact Us
-                </Link>
+                <span className="text-white/80">hello@cyphinity.com</span>
               </li>
               <li>
-                <Link href="/support" className="text-foreground/70 hover:text-blue-600 transition-colors">
-                  Help Center
-                </Link>
+                <span className="text-white/80">+1 (555) 123-4567</span>
               </li>
               <li>
-                <Link href="/faq" className="text-foreground/70 hover:text-blue-600 transition-colors">
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy" className="text-foreground/70 hover:text-blue-600 transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="text-foreground/70 hover:text-blue-600 transition-colors">
-                  Terms of Service
-                </Link>
+                <span className="text-white/80">San Francisco, CA</span>
               </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-8 pt-8 border-t border-border">
+        <div className="mt-8 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-foreground/70 text-sm">
+            <p className="text-white/80 text-sm">
               © {new Date().getFullYear()} Cyphinity. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-foreground/70 hover:text-blue-600 text-sm transition-colors">
+              <a href="#contact" className="text-white/80 hover:text-cyan-300 text-sm transition-colors duration-300">
                 Privacy
-              </Link>
-              <Link href="/terms" className="text-foreground/70 hover:text-blue-600 text-sm transition-colors">
+              </a>
+              <a href="#contact" className="text-white/80 hover:text-cyan-300 text-sm transition-colors duration-300">
                 Terms
-              </Link>
-              <Link href="/cookies" className="text-foreground/70 hover:text-blue-600 text-sm transition-colors">
-                Cookies
-              </Link>
+              </a>
             </div>
           </div>
         </div>
